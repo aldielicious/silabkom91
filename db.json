@@ -1,0 +1,127 @@
+{
+  "labs": [
+    {
+      "id": "lab-komputer",
+      "name": "Lab Komputer",
+      "capacity": 40,
+      "pcCount": 40,
+      "equipment": [
+        "40x PC i5, 8GB RAM",
+        "Internet Fiber 100 Mbps",
+        "Proyektor Epson",
+        "AC Daikin"
+      ],
+      "status": "Tersedia"
+    },
+    {
+      "id": "lab-elearning",
+      "name": "Lab E-learning",
+      "capacity": 40,
+      "pcCount": 40,
+      "equipment": [
+        "40x Thin Client / PC Intel",
+        "E-learning Server",
+        "Internet Access",
+        "AC Sharp"
+      ],
+      "status": "Tersedia"
+    },
+    {
+      "id": "lab-multimedia",
+      "name": "Lab Multimedia",
+      "capacity": 40,
+      "pcCount": 40,
+      "equipment": [
+        "40x PC Ryzen 5, Nvidia GTX 1660",
+        "Drawing Tablet Support",
+        "Proyektor Epson",
+        "AC Panasonic"
+      ],
+      "status": "Tersedia"
+    },
+    {
+      "id": "lab-bahasa",
+      "name": "Lab Bahasa",
+      "capacity": 40,
+      "pcCount": 40,
+      "equipment": [
+        "40x Headset Multimedia",
+        "Audio Distribution Console",
+        "PC Instruktur",
+        "AC Daikin"
+      ],
+      "status": "Tersedia"
+    }
+  ],
+  "sessions": [
+    {
+      "id": "jam-1",
+      "name": "Jam Ke-1",
+      "time": "07:00 - 07:45"
+    },
+    {
+      "id": "jam-2",
+      "name": "Jam Ke-2",
+      "time": "07:45 - 08:30"
+    },
+    {
+      "id": "jam-3",
+      "name": "Jam Ke-3",
+      "time": "08:30 - 09:15"
+    },
+    {
+      "id": "jam-4",
+      "name": "Jam Ke-4",
+      "time": "09:15 - 10:00"
+    },
+    {
+      "id": "jam-5",
+      "name": "Jam Ke-5",
+      "time": "10:15 - 11:00"
+    },
+    {
+      "id": "jam-6",
+      "name": "Jam Ke-6",
+      "time": "11:00 - 11:45"
+    },
+    {
+      "id": "jam-7",
+      "name": "Jam Ke-7",
+      "time": "12:30 - 13:15"
+    },
+    {
+      "id": "jam-8",
+      "name": "Jam Ke-8",
+      "time": "13:15 - 14:00"
+    },
+    {
+      "id": "jam-9",
+      "name": "Jam Ke-9",
+      "time": "14:00 - 14:45"
+    },
+    {
+      "id": "jam-10",
+      "name": "Jam Ke-10",
+      "time": "14:45 - 15:30"
+    },
+    {
+      "id": "jam-11",
+      "name": "Jam Ke-11",
+      "time": "15:30 - 16:15"
+    },
+    {
+      "id": "jam-12",
+      "name": "Jam Ke-12",
+      "time": "16:15 - 17:00"
+    },
+    {
+      "id": "jam-13",
+      "name": "Di Luar Jam KBM",
+      "time": "Sesuai Kebutuhan"
+    }
+  ],
+  "bookings": [],
+  "inventory": [],
+  "borrowings": [],
+  "notifications": []
+}

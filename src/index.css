@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Custom CSS animation classes for micro-interactions */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slideDown {
+  animation: slideDown 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom styling for rendered markdown content in report views */
+.markdown-body h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #F8FAFC;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.markdown-body h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #A5B4FC;
+  margin-top: 1rem;
+  margin-bottom: 0.35rem;
+}
+
+.markdown-body p {
+  margin-bottom: 0.75rem;
+  color: #E2E8F0;
+  line-height: 1.6;
+}
+
+.markdown-body ul {
+  list-style-type: disc;
+  margin-left: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #E2E8F0;
+}
+
+.markdown-body li {
+  margin-bottom: 0.35rem;
+}
+
+.markdown-body strong {
+  color: #FFFFFF;
+}
+
+/* --- SYSTEM DARK MODE OVERRIDES --- */
+.dark {
+  /* Core Backgrounds */
+  background-color: #080d1a !important;
+  color: #f1f5f9 !important;
+  
+  /* Sidebar, Topbar, Mobile Header */
+  & #sidebar-navigation,
+  & #desktop-topbar,
+  & #mobile-header {
+    background-color: #0b0f19 !important;
+    border-color: #1e293b !important;
+  }
+  
+  /* Mobile navigation dropdown */
+  & .md\:hidden.bg-white {
+    background-color: #0f172a !important;
+    border-color: #1e293b !important;
+  }
+  
+  /* White Cards & Panels */
+  & .bg-white {
+    background-color: #111827 !important; /* dark gray-900 */
+    border-color: #1e293b !important; /* slate-800 */
+  }
+  
+  /* Slate-50/100 Background sections, panels, or blocks */
+  & .bg-slate-50,
+  & .bg-slate-50\/50,
+  & .bg-slate-50\/70,
+  & .bg-slate-100,
+  & .bg-slate-200\/80 {
+    background-color: #0f172a !important; /* dark slate-900 */
+    border-color: #1e293b !important;
+  }
+  
+  /* Blue information blocks / Alert banners */
+  & .bg-blue-50,
+  & .bg-blue-50\/50,
+  & .bg-blue-50\/70 {
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
+    color: #93c5fd !important;
+  }
+  
+  /* Text Color Swaps */
+  & .text-slate-900,
+  & .text-slate-800 {
+    color: #f8fafc !important; /* slate-50 */
+  }
+  & .text-slate-700 {
+    color: #e2e8f0 !important; /* slate-200 */
+  }
+  & .text-slate-600 {
+    color: #cbd5e1 !important; /* slate-300 */
+  }
+  & .text-slate-500 {
+    color: #94a3b8 !important; /* slate-400 */
+  }
+  & .text-slate-400 {
+    color: #64748b !important; /* slate-500 */
+  }
+  
+  /* Text Blue Overrides to fit on dark backgrounds */
+  & .text-blue-900 {
+    color: #93c5fd !important;
+  }
+  & .text-blue-800,
+  & .text-blue-700,
+  & .text-blue-600 {
+    color: #60a5fa !important;
+  }
+  
+  /* Borders */
+  & .border-slate-200,
+  & .border-slate-100,
+  & .border-slate-200\/80,
+  & .border-slate-100\/50,
+  & .border-blue-100,
+  & .border-blue-100\/30,
+  & .border-blue-100\/50 {
+    border-color: #1e293b !important;
+  }
+  
+  /* Buttons, Navigation Items, and Inputs */
+  & input,
+  & select,
+  & textarea {
+    background-color: #0f172a !important;
+    color: #f8fafc !important;
+    border-color: #1e293b !important;
+  }
+  & input::placeholder {
+    color: #64748b !important;
+  }
+  
+  /* Tables */
+  & th {
+    background-color: #1e293b !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+  }
+  & td {
+    border-color: #1e293b !important;
+  }
+  & tr:hover {
+    background-color: rgba(30, 41, 59, 0.4) !important;
+  }
+  
+  /* Active navigation state and hovers */
+  & button.hover\:bg-slate-50:hover,
+  & a.hover\:bg-slate-50:hover,
+  & div.hover\:bg-slate-50:hover {
+    background-color: #1e293b !important;
+  }
+  
+  & .bg-blue-50.text-blue-700 {
+    background-color: #1e293b !important;
+    color: #60a5fa !important;
+    border-color: #334155 !important;
+  }
+  
+  /* Status Badge Overrides for Dark Mode */
+  & .bg-emerald-50 {
+    background-color: rgba(16, 185, 129, 0.15) !important;
+    color: #34d399 !important;
+    border-color: rgba(16, 185, 129, 0.3) !important;
+  }
+  & .bg-amber-50 {
+    background-color: rgba(245, 158, 11, 0.15) !important;
+    color: #fbbf24 !important;
+    border-color: rgba(245, 158, 11, 0.3) !important;
+  }
+  & .bg-red-50 {
+    background-color: rgba(239, 68, 68, 0.15) !important;
+    color: #f87171 !important;
+    border-color: rgba(239, 68, 68, 0.3) !important;
+  }
+  
+  /* Specific Buttons and Accents */
+  & #asisten-login-sidebar-btn {
+    color: #60a5fa !important;
+    border-color: rgba(96, 165, 250, 0.3) !important;
+  }
+  & #asisten-login-sidebar-btn:hover {
+    background-color: rgba(96, 165, 250, 0.1) !important;
+  }
+  
+  /* Recharts custom hover cards */
+  & .recharts-default-tooltip {
+    background-color: #111827 !important;
+    border-color: #334155 !important;
+    color: #f8fafc !important;
+  }
+}
